@@ -25,9 +25,9 @@ var worker = [
     { id: 11, name: "tiến", email: "tientien@gmail.com", day: 23, salary: 28700, bonus: 340 },
     { id: 12, name: "xuân", email: "xun@gmail.com", day: 17, salary: 23030, bonus: 570 },
     { id: 13, name: "cường", email: "namcuong@gmail.com", day: 20, salary: 34890, bonus: 560 },
-    { id: 11, name: "chinh", email: "23ching@gmail.com", day: 22, salary: 27700, bonus: 340 },
-    { id: 12, name: "tu", email: "xutu@gmail.com", day: 27, salary: 43030, bonus: 570 },
-    { id: 13, name: "cưong", email: "nacuong@gmail.com", day: 19, salary: 30890, bonus: 500 },
+    { id: 14, name: "chinh", email: "23ching@gmail.com", day: 22, salary: 27700, bonus: 340 },
+    { id: 15, name: "tu", email: "xutu@gmail.com", day: 27, salary: 43030, bonus: 570 },
+    { id: 16, name: "cưong", email: "nacuong@gmail.com", day: 19, salary: 30890, bonus: 500 },
 
 ];
 document.getElementById("updatebtn").style.display = "none"

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Worker Manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;600&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+
+    
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>Worker Manager</title>
+        <meta charset="utf-8" />
+      </head>
+      <body>
+        <div class="panel" id="panel">
+          <div class="panel-body" id="panel-form">
+            <h2>Input Information</h2>
+            <form method="post">
+
+              <div class="form">
+                <label> Name:</label>
+                <input class="form-control" type="text" name="name" id="name" />
+              </div>
+
+              <div class="form">
+                <label>Email:</label>
+                <input
+                  class="form-control"
+                  type="email"
+                  name="email"
+                  id="email"
+                />
+              </div>
+              
+              <div class="form">
+                <label>Day:</label>
+                <input class="form-control" type="number" name="day" id="day" />
+              </div>
+              <div class="form">
+                <label>Salary:</label>
+                <input
+                  class="form-control"
+                  type="number"
+                  name="salary"
+                  id="salary"
+                />
+              </div>
+              <div class="form">
+                <label>Bonus:</label>
+                <input
+                  class="form-control"
+                  type="number"
+                  name="bonus"
+                  id="bonus"
+                />
+              </div>
+
+              <div class="form">
+                <button id="addbtn" type="button" onclick="addWorker()">
+                  Add Worker
+                </button>
+                <button id="updatebtn" type="button" onclick="updateWorker()">
+                  Update Worker
+                </button>
+                <!-- <button id="close" type="button" onclick="closePopUp()">
+                  Close
+                </button> -->
+              </div>
+            </form>
+          </div>
+      <div class="form-popup">
+        <div class="form-search">
+          <input class="form-input" style="display:inline;" type="search" id="search" name="search">
+          <button  class="btn-search" id="searchbtn" type="button" onclick="searchWorker()">
+              Search
+          </button>
+        </div>
+        <!-- <div class="form">
+          <button  class="btn-search" id="popupbtn" type="button" onclick="popUp()">
+              Add
+          </button>
+        </div> -->
+      </div>
+        <div class="panel">
+          <div class="panel-table">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name <button id="nameASC" type="button" onclick="sort('name','ASC')">
+                    <i class="fa fa-arrow-up"></i> 
+                    </button>
+                    <button id="nameDESC" type="button" onclick="sort('name','DESC')">
+                        <i class="fa fa-arrow-down"></i>
+                    </button></th>
+                    <th>Email <button id="emailASC" type="button" onclick="sort('email','ASC')">
+                      <i class="fa fa-arrow-up"></i> 
+                      </button>
+                      <button id="emailDESC" type="button" onclick="sort('email','DESC')">
+                          <i class="fa fa-arrow-down"></i>
+                      </button></th>
+                  <th>Day <button id="dayASC"  type="button" onclick="sort('day','ASC')">
+                    <i class="fa fa-arrow-up"></i> 
+                    </button>
+                    <button  id="dayDESC" type="button" onclick="sort('day','DESC')">
+                        <i class="fa fa-arrow-down"></i>
+                    </button></th>
+                  <th>Salary <button id="salaryASC"  type="button" onclick="sort('salary','ASC')">
+                    <i class="fa fa-arrow-up"></i>
+                    </button>
+                    <button id="salaryDESC" type="button" onclick="sort('salary','DESC')">
+                        <i class="fa fa-arrow-down"></i>
+                    </button></th>
+                  <th>Bonus <button id="bonusASC" type="button" onclick="sort('bonus','ASC')">
+                    <i class="fa fa-arrow-up"></i>
+                    </button>
+                    <button id="bonusDESC" type="button" onclick="sort('bonus','DESC')">
+                        <i class="fa fa-arrow-down"></i>
+                    </button></th>
+
+                  <th>Action</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="tableWorker">
+                <!-- <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    <button class="btn btn-warning" onclick="editWorker()">
+                      Edit
+                    </button>
+                  </td>
+                  <td>
+                    <button class="btn btn-danger" onclick="deleteWorker()">
+                      Delete
+                    </button>
+                  </td>
+                </tr> -->
+              </tbody>
+            </table>
+            <div id="listNumberPage"> 
+                <h3>List page</h3>
+                <ul id="numberPage">
+                </ul>  
+                <ul>
+                  <li id="totalitem"></li>
+                </ul> 
+                
+              </div>
+          </div>
+        </div>
+        </div>
+      </body>
+      <script src="./worker.js"> </script>
+    </html>
+  </body>
+</html>
